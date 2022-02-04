@@ -40,7 +40,7 @@ Heart Attack Analysis & Prediction Dataset (Kaggle: https://www.kaggle.com/rashi
 ### Number of Hidden Layer & Neural
 We choose **1 hidden layer with 512 neurons**
 
-![result 1](./images/result1.jpg "hidden and neurons")
+<img src="https://github.com/teehim/mlp_hw1/blob/main/images/result1.JPG?raw=true" style="width:500px;"/>
 
 ### Activation Function and Loss Function
 Because in previous experiment we choose 1 hidden layer, therefore in this experiment we will experiment on a model with 1 hidden layer (512 neurons) to reduce the amount of experiment
@@ -48,17 +48,17 @@ Because in previous experiment we choose 1 hidden layer, therefore in this exper
 We choose **relu** as activation function and **binary cross entropy** as loss function
 
 
-![result 5](./images/result5.jpg "activation and loss")
+<img src="https://github.com/teehim/mlp_hw1/blob/main/images/result5.JPG?raw=true" style="width:500px;"/>
 
 ### Learning rate and Activation function
 We choose **Adamax** as activation function and leaning rate of **0.001**
 
-![result 2](./images/result2.jpg "activation and lr")
+<img src="https://github.com/teehim/mlp_hw1/blob/main/images/result2.JPG?raw=true" style="width:300px;"/>
 
 ### Batch size and Epoch
 We choose **1000 epochs** and **batch size of 256**
 
-![result 3](./images/result3.jpg "batchsize and epoch")
+<img src="https://github.com/teehim/mlp_hw1/blob/main/images/result3.JPG?raw=true" style="width:800px;"/>
 
 ## 3. Putting it all together
 After we got the result of all experiment, We use the best hyperparameter of each experiment to construct the final model
@@ -75,7 +75,7 @@ with
 - batch size = 256
 - epoch = 1000
 
-![result 6](./images/result6.jpg "MLP")
+<img src="https://github.com/teehim/mlp_hw1/blob/main/images/result6.JPG?raw=true" style="width:500px;"/>
 
 and get the following result
 Accuracy: **0.84615**
@@ -84,7 +84,7 @@ Loss: **0.97997**
 ## 4. Traditional ML model
 We choose 3 traditional ML model: Logistic Regression, Random Forest & KNN and get the following result
 
-![result 4](./images/result4.jpg "ML result")
+<img src="https://github.com/teehim/mlp_hw1/blob/main/images/result4.JPG?raw=true" style="width:300px;"/>
 
 ## 5. Comparison and Discussion
 จากผลที่ได้จาก final model และ traditional ML model จะเห็นได้ว่าค่า Accuracy ที่ได้จาก final model นั้นต่ำกว่าผลที่ได้จาก knn model และผลที่ได้ระหว่างจากทดลองปรับเปลี่ยน hyperparameter ในบางรอบ
