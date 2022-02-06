@@ -81,6 +81,28 @@ and get the following result
 Accuracy: **0.84615**
 Loss: **0.97997**
 
+Which does not produce the best result when compare with the result we got in some trial when tuning individual hyperparameter
+
+Our best model came from tuning multiple hyperparameter at the same time
+
+Best model's hyperparamenters
+- number of hidden layer: 2
+- number of neurons: 128 / 128
+- dropout = 0
+- activation function = relu / sigmoid
+- learning rate = 0.001
+- optimizer = Adam
+- loss function = binary cross entropy
+- batch size = 64
+- epoch = 100
+
+<img src="https://github.com/teehim/mlp_hw1/blob/main/images/result7.JPG?raw=true" style="width:500px;"/>
+
+with the following result
+Accuracy: **0.8901**
+Loss: **0.5417**
+
+
 ## 4. Traditional ML model
 We choose 3 traditional ML model: Logistic Regression, Random Forest & KNN and get the following result
 
@@ -98,7 +120,6 @@ We choose 3 traditional ML model: Logistic Regression, Random Forest & KNN and g
 
 ### Pros
 - สามารถใช้ MLP กับปัญหาใดๆก็ได้ ที่มีข้อมูลที่เป็น tabular data ต่างจาก ML model ที่บาง model เช่น KNN หรือ Logistic Regression ที่ต้องวิเคราะห์ข้อมูลก่อนว่ามีการกระจายตัวที่เหมาะสมกับ model หรือไม่
-- สามารถเพิ่ม-ลด ความซับซ้อนของ model ได้ด้วยการเพิ่ม-ลด จำนวนของ hidden layer และ neuron
 
 ### Cons
 - ใช้เวลาในการ traing มากกว่า ML model ทำให้การปรับจูน hyperparameter นั้นใช้เวลามากกว่ามาก
@@ -106,16 +127,16 @@ We choose 3 traditional ML model: Logistic Regression, Random Forest & KNN and g
     - KNN ที่สามารถอธิบายได้ว่าเพราะเพื่อนบ้านส่วนใหญ่เป็น class นั้น
     - Logistic Regression ที่สามารถอธิบายได้ด้วยสมการที่ได้จากการ train model
     - Random Forest ที่สามารถบอก feature importance ได้
-- เมื่อมีจำนวนข้อมูลไม่มาก ประสิทธิภาพที่ได้นั้นไม่แตกต่างกับ ML model แต่ต้องให้ทรัพยากรในการ train มากกว่า
+- ประสิทธิภาพที่ได้นั้นไม่แตกต่างกับ ML model แต่ต้องให้ทรัพยากรในการ train มากกว่า
 
 ## 7. Recommendations
 - ไม่ควรจะแยกกันปรับจูน hyperparameter แล้วนำมารวมกัน เพราะไม่ได้ให้ผลลัพธ์ที่ดีที่สุด ควรจะแยกกันปรับทุกๆ hyperparameter แล้วเอาผลลัพธ์ที่ดีที่สุดมามากกว่า
-- ถ้าหากข้อมูลที่มีจำนวนไม่มาก ควรใช้ traditional ML model เพราะใช้ทรัพยากรในการ train น้อยกว่า และสามารถอธิบายผลได้
+- ควรใช้ traditional ML model เพราะใช้ทรัพยากรในการ train น้อยกว่า และสามารถอธิบายผลได้
 
 ## 8. Members
-- (16.67%) 6220422048 กชกร เรืองศรี
-- (16.67%) 6220422065 สุธาสินี โพธิ์แจ่ม  
-- (16.67%) ไตรเทพ จันทร์เทพ
-- (16.67%) 6310422028 วรเมธ ปลอดโปร่ง
-- (16.67%) 6310422031 ธนัตถ์กรณ์ ชื่นบรรลือสุข
-- (16.67%) 6310422046 วีระศักดิ์ การุณย์
+- (20%) 6220422048 กชกร เรืองศรี (ทดลองปรับ hyperparameter ทุกตัว - best model acc=89%)
+- (0%) 6220422061 ไตรเทพ จันทร์เทพ (ติดต่อไม่ได้)
+- (20%) 6220422065 สุธาสินี โพธิ์แจ่ม (ทดลองปรับ batch size และ epoch)
+- (20%) 6310422028 วรเมธ ปลอดโปร่ง (ทดลองปรับจำนวน hidden layer และ neuron)
+- (20%) 6310422031 ธนัตถ์กรณ์ ชื่นบรรลือสุข (ทดลองปรับ activation function และ loss function / ทำ ML model และรวบรวมสรุปผล)
+- (20%) 6310422046 วีระศักดิ์ การุณย์ (ทดลองปรับ Optimizer และ Learning rate)
